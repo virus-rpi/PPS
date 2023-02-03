@@ -1,18 +1,8 @@
-from pathlib import Path
-
 from tkinter import Tk, Canvas, Button, PhotoImage
-
-
-OUTPUT_PATH = Path(__file__).parent
-ASSETS_PATH = OUTPUT_PATH / Path(r"/Python/PPS/build/assets/frame0/")
 
 
 def create():
     print("Ok")
-
-
-def relative_to_assets(path: str) -> Path:
-    return ASSETS_PATH / Path(path)
 
 
 def main():
@@ -58,7 +48,8 @@ def main():
         outline="")
 
     button_image_1 = PhotoImage(
-        file=relative_to_assets("button_1.png"))
+        file=r"assets/frame0/button_1.png"
+    )
     button_1 = Button(
         image=button_image_1,
         borderwidth=0,
@@ -75,4 +66,8 @@ def main():
     button_1.update()
     window.resizable(False, False)
 
-    return window
+    window.mainloop()
+
+
+if __name__ == "__main__":
+    main()

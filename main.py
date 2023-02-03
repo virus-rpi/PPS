@@ -1,6 +1,3 @@
-import build.gui as gui
+import gui
 
-w = gui.main()
-
-while True:
-    w.update()
+gui.main()
