@@ -1,6 +1,6 @@
 import sys
 import os
-
+import socket
 import win32con
 from flask import Flask, request
 import json
@@ -50,4 +50,5 @@ def result():
     return 'Received!'
 
 
-app.run(host='192.168.178.53')
+IPAddr = socket.getaddrinfo(socket.gethostname(), None)[-1][-1][0]
+app.run(host=IPAddr)
