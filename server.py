@@ -50,5 +50,4 @@ def result():
     return 'Received!'
 
 
-IPAddr = socket.getaddrinfo(socket.gethostname(), None)[-1][-1][0]
-app.run(host=IPAddr)
+app.run(host=socket.getaddrinfo(socket.gethostname(), None)[-1][-1][0])
