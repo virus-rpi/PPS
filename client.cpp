@@ -5,7 +5,7 @@
 // WLAN-Konfiguration
 const char* ssid = "xxxx";
 const char* password = "xxxxx";
-const char* ip =  "http://x.x.x.x:5000"
+const char* ip =  "http://x.x.x.x:5000";
 
 // GPIO-Konfiguration
 const int GPIO_PIN = 4;
